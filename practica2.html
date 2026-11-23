@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 02</title>
+
+    <!-- Bootstrap CSS (Usando la misma versión estable que en la P1) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+          crossorigin="anonymous">
+
+    <!-- FontAwesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tu CSS unificado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Encabezado unificado -->
+    <header class="hero-section">
+        <h1>Práctica 02</h1>
+        <p class="mb-0">Consultar publicación</p>
+    </header>
+
+    <div class="container mb-5">
+        
+        <!-- Botón para regresar al index -->
+        <a href="index.html" class="btn btn-outline-dark btn-sm mb-3 rounded-pill">
+            <i class="fas fa-arrow-left me-1"></i> Regresar al Inicio
+        </a>
+
+        <!-- Contenedor principal (tarjeta blanca) -->
+        <div class="main-card">
+            
+            <!-- Usamos la clase search-box que definimos en style.css -->
+            <div class="search-box">
+                <h5 class="mb-3">Consultar publicación por ID</h5>
+                
+                <div class="d-flex align-items-end">
+                    <div class="flex-grow-1 me-3">
+                        <label for="id" class="form-label mb-1">ID de la publicación</label>
+                        <input type="number" id="id" class="form-control" placeholder="Captura el ID (ej. 1)">
+                    </div>
+                    <button class="btn btn-custom" onclick="consultar()">Consultar</button>
+                </div>
+                
+                <!-- Contenedor para mostrar el resultado de la consulta -->
+                <div class="mt-4">
+                    <p id="resultado" class="p-3 bg-white border rounded mb-0 text-muted">
+                        Aquí aparecerá la información...
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer unificado -->
+    <footer>
+        <p class="mb-1">Prácticas de programación en la Nube</p>
+        <p class="mb-0 fw-bold">Nombre del Alumno</p>
+    </footer>
+
+    <!-- Scripts al final del body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+            crossorigin="anonymous"></script>
+            
+    <!-- Tu script de la práctica 2 -->
+    <script src="../JS/prac2.js"></script>
+</body>
+</html>
