@@ -1,0 +1,184 @@
+/* =========================================
+   1. VARIABLES Y ESTILOS GLOBALES
+   ========================================= */
+:root {
+    --color-primario: #1e3c72;
+    --color-secundario: #2a5298;
+    --fondo-pagina: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --fondo-tarjeta: #ffffff;
+    --texto-oscuro: #333333;
+    --texto-mutado: #6c757d;
+    --borde-radio: 15px;
+    --sombra-suave: 0 4px 10px rgba(0,0,0,0.08);
+    --sombra-hover: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+body {
+    background: var(--fondo-pagina);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--texto-oscuro);
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   2. ENCABEZADOS (HERO) Y FOOTER
+   ========================================= */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+    color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2.5rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1, .hero-section h2 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+/* =========================================
+   3. TARJETAS DE CONTENEDOR (Para P1, P2, P3, P4)
+   ========================================= */
+.main-card {
+    background-color: var(--fondo-tarjeta);
+    border-radius: var(--borde-radio);
+    padding: 30px;
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   4. DISEÑO DEL INDEX (Menú de inicio)
+   ========================================= */
+.card-practica {
+    border: none;
+    border-radius: var(--borde-radio);
+    transition: all 0.3s ease;
+    background-color: var(--fondo-tarjeta);
+    box-shadow: var(--sombra-suave);
+    height: 100%;
+}
+
+.card-practica:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-hover);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+}
+
+.btn-custom {
+    background-color: var(--color-primario);
+    color: white;
+    border-radius: 30px;
+    padding: 8px 25px;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+/* =========================================
+   5. DISEÑO PRÁCTICA 3 (Tablas)
+   ========================================= */
+.table {
+    margin-bottom: 0;
+    border-radius: 10px;
+    overflow: hidden; /* Para que los bordes redondeados se apliquen */
+}
+
+.table thead th {
+    background-color: var(--color-primario) !important;
+    color: white !important;
+    border: none;
+    padding: 15px;
+    text-align: center;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    padding: 12px 15px;
+    border-color: #e9ecef;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+/* =========================================
+   6. DISEÑO PRÁCTICA 4 (Buscador y Tarjetas)
+   ========================================= */
+.search-box {
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--color-primario);
+    margin-bottom: 25px;
+}
+
+.search-box label {
+    font-weight: 600;
+    color: var(--color-primario);
+}
+
+.search-box input {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+}
+
+.foto-card {
+    background: var(--fondo-tarjeta);
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.foto-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.foto-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.foto-card h5 {
+    color: var(--color-primario);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
